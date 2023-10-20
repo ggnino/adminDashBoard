@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+.admin-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr 5fr 1fr 1fr 1fr;
+  gap: 5px;
+  min-height: 100vh;
+}
+.admin-header,
+.admin-issue-showcase,
+.admin-tech-showcase {
+  grid-column: 2/6;
+}
+.admin-dashboard {
+  grid-row: 1/6;
+}
+.admin-tech-showcase {
+  grid-row: 2/5;
+}
+.admin-issue-showcase {
+  grid-row: 5/6;
+}
+div {
+  border: 5px solid blue;
+}
