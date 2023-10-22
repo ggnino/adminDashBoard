@@ -1,3 +1,4 @@
+@import url("https://fontlibrary.org//face/fira-code");
 * {
   box-sizing: border-box;
 }
@@ -12,7 +13,17 @@ body {
   margin: 0;
   padding: 0;
 }
-
+h1,
+h2,
+h3 {
+  font-family: "FiraCodeRegular";
+}
+a,
+li,
+span,
+p {
+  font-family: monospace, sans-serif;
+}
 /* Tech Dashboard */
 .admin-container {
   display: grid;
@@ -29,26 +40,30 @@ body {
 }
 .admin-dashboard {
   grid-row: 1/6;
-  /* display: flex; */
+  grid-column: 1/1;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 4fr;
+  /* border: 15px solid blue; */
   background-color: var(--primary-bg-color);
   transition: all 0.2s linear;
   width: 100%;
   padding: 0;
 }
 .admin-dashboard-logo-container {
-  display: flex;
-  gap: 2rem;
-  flex-direction: row-reverse;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-row: 1/1;
   padding: 1.5rem;
-  margin: 5rem 0;
-  width: 100%;
   transition: all 0.2s ease-in;
   cursor: default;
+  align-items: center;
+  gap: 1rem;
 }
 .admin-dashboard-logo-heading {
   font-size: 10rem;
+  grid-column: 2/2;
+  /* justify-self: end; */
 }
 .admin-dashboard-logo-heading:hover::first-letter {
   color: black;
@@ -58,41 +73,58 @@ body {
   transition: all 0.2s linear;
 }
 .admin-dashboard-logo {
+  grid-column: 1/1;
+  grid-row: 1/1;
   transition: all 0.1s linear;
-  width: 3vw;
+  /* width: 3vw; */
+  justify-self: end;
   filter: contrast(5%);
 }
 .admin-dashboard-logo-heading:hover + .admin-dashboard-logo {
   filter: contrast(100%);
 }
 .admin-dashboard-links {
-  display: flex;
-  flex-direction: column;
   list-style: none;
-  width: 100%;
   padding: 0;
+  /* border: 13px solid red; */
+  display: grid;
+  gap: 5rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(7, 0fr);
 }
 .admin-dashboard-link {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
   align-items: center;
-  justify-content: center;
-  gap: 5rem;
+  /* justify-self: stretch; */
+  /* justify-items: start; */
+  grid-column: 1/1;
   color: var(--secondary-bg-color);
   font-size: 3rem;
   padding: 1rem;
   cursor: pointer;
+  gap: 1rem;
   transition: all 0.2s linear;
+  /* border: 15px solid blue; */
+  /* grid-column: 1/1; */
 }
 .admin-dashboard-link:hover {
   color: var(--font-color);
   background-color: var(--secondary-bg-color);
 }
 .admin-dashboard-link-icon + p {
-  text-align: justify;
-  width: 2vw;
+  /* text-align: justify; */
+  /* width: 2vw; */
+  /* grid-row: 1/1; */
+  /* grid-column: 2/2; */
+  /* border: 13px solid red; */
 }
 .admin-dashboard-link-icon {
+  grid-column: 1/1;
   width: 4rem;
+  justify-self: end;
+  /* border: 13px solid red; */
   transition: all 0.2s ease-in;
   filter: contrast(15%);
 }
@@ -141,7 +173,8 @@ body {
 .admin-header-content-img-2,
 .admin-header-content-img-3 {
   cursor: pointer;
-  width: 1vw;
+  width: 4rem;
+  /* width: clamp(4rem, 1vw, 5rem); */
 }
 .admin-header-content-img-1 {
   position: relative;
