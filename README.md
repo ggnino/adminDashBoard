@@ -1,10 +1,10 @@
-# adminDashBoard
+# iTech DashBoard
 
-A page design for a ticketing service client.
+The iTech dashboard is a page design for a ticketing service client. It is a the homepage for the technician to view and resolve different tech issues.
 
 # Live Demo
 
-<a href="https://ggnino.github.io/adminDashBoard/" target="_blank" rel="no-referrer">Administrator DashBoard</a>
+<a href="https://ggnino.github.io/adminDashBoard/" target="_blank" rel="no-referrer">iTech DashBoard</a>
 
 # Built With
 
